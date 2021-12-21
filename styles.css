@@ -1,0 +1,155 @@
+/*
+====================
+Google Fonts
+==================== 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/*
+====================
+Variables
+==================== 
+*/
+:root {
+    --ff-primary:'Kumbh Sans', sans-serif;
+    --clr-dark-cyan: hsl(185, 75%, 39%);
+    --clr-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-dark-grayish-blue: hsl(227, 10%, 46%);
+    --clr-dark-grey: hsl(0, 0%, 59%);
+}
+
+/*
+====================
+Global Styles
+==================== 
+*/
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--ff-primary);
+}
+img:not(.profile) {
+    display: block;
+    
+}
+@media screen and (max-width: 375px)
+{
+    img:not(.profile) {
+    width: 100%;
+}
+    .card {
+        width: 85vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .top {
+    transform: translate(-45%,-50%);
+}
+.bottom {
+    transform: translate(50%,20%);
+}
+}
+main {
+    height: 100vh;
+    position: relative;
+    background-color:var(--clr-dark-cyan);
+    overflow: hidden;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+    .top {
+    transform: translate(-45%,-50%);
+    }
+.bottom {
+    transform: translate(50%,20%);
+}
+
+@media screen and (min-width:1440px) {
+    .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-45%);
+}
+.bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(8%,44%);
+}
+}
+
+.profile-background {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.position {
+    position: relative;
+}
+.profile {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    border-radius: 50%;
+    border:5px solid white;
+}
+.card-info {
+    text-align: center;
+}
+.name-age {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.name,.stats {
+    font-size: 18px;
+
+}
+.name {
+    color: var(--clr-dark-desaturated-blue);
+    font-weight: 700;
+}
+.age,.city {
+    color: var(--clr-dark-grayish-blue);
+    font-weight: 400;
+}
+.card-info .city {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: lightgray;
+}
+
+.stats {
+    display: flex;
+    text-align: center;
+    padding: 25px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.stats h1 {
+    color: var(--clr-dark-desaturated-blue);
+}
+.stats p {
+    color: var(--clr-dark-grayish-blue);
+    font-size: 14px;
+    letter-spacing: 2px;
+}
